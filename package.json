@@ -1,0 +1,24 @@
+{
+  "name": "munchkinserver",
+  "version": "1.0.0",
+  "description": "Express server that will run the Munchkin game and event hub",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest --coverage --verbose"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/meanJerkTime/munchkinServer.git"
+  },
+  "keywords": [
+    "node",
+    "express",
+    "server"
+  ],
+  "author": "Joe Pennock, Diane Stephani, Edgar Romero, Brendon Hampton",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/meanJerkTime/munchkinServer/issues"
+  },
+  "homepage": "https://github.com/meanJerkTime/munchkinServer#readme"
+}
