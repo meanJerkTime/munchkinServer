@@ -1,8 +1,15 @@
 'use strict';
+const PORT = process.env.PORT || 3000;
 const express = require('express');
 const app = express();
-const http = require('http');
-const server = http.createServer(app);
+// const http = require('http');
+// const server = http.createServer(app);
+
+
+const server = express()
+  .listen(PORT, () => console.log(`Listening on ${PORT}`));
+
+
 const io = require('socket.io').listen(server);
 
 app.use(express.urlencoded({extended:true}));
@@ -35,8 +42,6 @@ io.on('connection', (socket) => {
   console.log(socket.adapter.rooms);
 });
  
-
-
 
 function start(port) {
     server.listen(port, () => console.log('server up on port', port)); 
