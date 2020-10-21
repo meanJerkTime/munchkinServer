@@ -8,10 +8,10 @@ const server = require('./server.js');
 
 
 let connection = mysql.createConnection({
-    host: process.env.DB_HOST,
-    user: process.env.USERNAME,
-    password: process.env.PASSWORD,
-    database: process.env.DATABASE,
+    host: 'sql3.freemysqlhosting.net',
+    user:'sql3371758',
+    password: 'DGyXTR1gEW',
+    database: 'sql3371758',
   });
 
   
