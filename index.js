@@ -8,7 +8,7 @@ const server = require('./server.js');
 
 
 let connection = mysql.createConnection({
-    host: process.env.HOST,
+    host: process.env.DB_HOST,
     user: process.env.USERNAME,
     password: process.env.PASSWORD,
     database: process.env.DATABASE,
