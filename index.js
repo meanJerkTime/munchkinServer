@@ -1,9 +1,9 @@
 'use strict';
 
 require('dotenv').config();
+
 const mysql = require('mysql'); 
 const server = require('./server.js');
-
 
 // Database connection
 let connection = mysql.createConnection({
@@ -24,4 +24,6 @@ connection.connect(function(err) {
     console.log(result);
   });
 });
+
 server.start(process.env.PORT);
+// server.start(process.env.PORT);
