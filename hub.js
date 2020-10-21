@@ -2,7 +2,7 @@
 
 require('dotenv').config();
 const mysql = require('mysql'); 
-const io = require('socket.io'); // <-- Connected to whichever server is hosting events
+const io = require('socket.io')(process.env.PORT); // <-- Connected to whichever server is hosting events
 const server = require('./server.js');
 const gameRoom = io.of('/gameroom');
 
@@ -40,6 +40,7 @@ io.on('connect', (socket) => {
  
 
 
+// Database connection
 
 let connection = mysql.createConnection({
     host: process.env.DB_HOST,
