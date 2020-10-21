@@ -26,4 +26,3 @@ connection.connect(function(err) {
 });
 
 server.start(process.env.PORT);
-// server.start(process.env.PORT);
