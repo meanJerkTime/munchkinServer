@@ -9,6 +9,7 @@ const io = require('socket.io')(http);
 
 io.on('connection', (socket) => {
     console.log('Hub connected');
+    socket.emit('hubConnected');
 })
 
 app.use(express.urlencoded({extended:true}));
