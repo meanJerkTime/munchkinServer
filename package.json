@@ -2,7 +2,7 @@
   "name": "munchkinserver",
   "version": "1.0.0",
   "description": "Express server that will run the Munchkin game and event hub",
-  "main": "hub.js",
+  "main": "index.js",
   "scripts": {
     "test": "jest --coverage --verbose"
   },
