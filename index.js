@@ -1,29 +1,20 @@
 'use strict';
 
 require('dotenv').config();
-
-const mysql = require('mysql'); 
 const server = require('./server.js');
+
 const PORT = process.env.PORT || 3000;
 
 // Database connection
-let connection = mysql.createConnection({
-  host: process.env.DB_HOST,
-  user: process.env.USERNAME,
-  password: process.env.PASSWORD,
-  database: process.env.DATABASE,
-});
 
+const mongoose = require('mongoose');
 
-connection.connect(function(err) {
-  if (err) throw err;
-  console.log(" mySQL Connected!");
-  
-  let checkCards = `SELECT * FROM door_cards`;
-  connection.query(checkCards, function (err, result) {
-    if(err) throw err;
-    console.log(result);
-  });
-});
+mongoose.connect(process.env.MONGODB_URI, {
+    useNewUrlParser: true,
+    useUnifiedTopology: true
+})
+
+.then(() => console.log('MongoDB Connected...'))
+.catch(err => console.log(err));
 
 server.start(PORT);
