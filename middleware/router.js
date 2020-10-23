@@ -1,5 +1,4 @@
 'use strict';
-const { request, response } = require('express');
 const express = require('express');
 const playerAuth = require('../middleware/auth/playerAuth.js');
 const signUp = require('./playerSignUp.js');
