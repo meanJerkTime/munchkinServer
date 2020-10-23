@@ -5,15 +5,8 @@ const players = require('../models/players-model.js');
 
 module.exports = async(request,response,next) => {
     try {
-        // get username and pass from user
-        // check the headers
-        let authorization = request.headers.authorization;
-        let encoded = authorization.split(' ')[1];
-        let creds = base64.decode(encoded);
-        let [username, password] = creds.split(":");
-
-        // get user instance from model
-        let userRecord = await players.validateBasic(username, password);
+        let userRecord = await players.validateBasic(request.body.username,request.body.password);
+        console.log(userRecord);
         if(request.user = userRecord) {
             next();
         }
@@ -22,5 +15,4 @@ module.exports = async(request,response,next) => {
         next('Invalid Username or password'); 
     }
 }
-
 
