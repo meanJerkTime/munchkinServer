@@ -8,7 +8,7 @@ const router = express.Router();
 router.post ('/signup',signUp, async (request, response, next) => {
 });
 
-router.post('/signin',playerAuth, async (request,response,next) => {
+router.get('/signin',playerAuth, async (request,response,next) => {
     let showUser = {
         user:request.user.username
     }
