@@ -4,7 +4,8 @@
   "description": "Express server that will run the Munchkin game and event hub",
   "main": "index.js",
   "scripts": {
-    "test": "jest --coverage --verbose"
+    "test": "jest --coverage --verbose",
+    "start": "node index.js"
   },
   "repository": {
     "type": "git",
@@ -22,8 +23,12 @@
   },
   "homepage": "https://github.com/meanJerkTime/munchkinServer#readme",
   "dependencies": {
+    "base-64": "^1.0.0",
+    "bcrypt": "^5.0.0",
+    "cors": "^2.8.5",
     "dotenv": "^8.2.0",
     "express": "^4.17.1",
+    "mongoose": "^5.10.9",
     "mysql": "^2.18.1"
   }
 }
